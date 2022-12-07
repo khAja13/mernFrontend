@@ -1,0 +1,111 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.active {
+	background-color: rgb(185, 77, 77);
+	padding: 0px 5px;
+	border-radius: 5px;
+}
+.outer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: calc(100vh - 30vh);
+	margin-bottom: 10px;
+}
+.read {
+	margin: auto;
+	overflow: auto;
+}
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	word-break: break-all;
+}
+
+td,
+th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+.update{
+	/* border: 2px solid red; */
+	height: calc(100vh - 85px - 10px - 8px - 115px );
+}
+
+.updateFoot{
+	background-color: #001f3f;
+	text-align: center;
+	width: 100%;
+	color: white;
+	padding: 8px 0px;
+	margin-top: 40px;
+}
+.foot{
+    background-color: #001f3f;
+    text-align: center;
+    padding: 8px 0px;
+    color: white;
+    width: 100%;
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-width: 700px) {
+	table {
+		overflow-x: scroll;
+	}
+	table,
+	thead,
+	tbody,
+	th,
+	td,
+	tr {
+		display: block;
+		width: auto;
+		margin: 10px;
+	}
+	th {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+	td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+	td:nth-of-type(1):before {
+		content: "ID";
+	}
+	td:nth-of-type(2):before {
+		content: "Name";
+	}
+	td:nth-of-type(3):before {
+		content: "Email";
+	}
+	td:nth-of-type(4):before {
+		content: "Phone";
+	}
+}

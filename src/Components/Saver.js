@@ -14,6 +14,7 @@ async function Saver(values, val){
         }),
     });
 
+    console.log(val);
     console.log(url)
     console.log(values);
     console.log(conn.status);

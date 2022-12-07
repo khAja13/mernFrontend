@@ -16,6 +16,7 @@ function Search() {
 				headers: {
 					"Content-Type": "application/json",
 				},
+				mode: 'no-cors'
 			});
 			const res = await result.json();
 			values.id = res._id;

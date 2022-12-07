@@ -11,7 +11,7 @@ async function Saver(values, val){
             email: values.email,
             phone: values.phone
         }),
-        mode:'no-cors'
+        mode:'cors'
     });
 
     console.log(url)

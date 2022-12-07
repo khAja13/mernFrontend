@@ -4,7 +4,7 @@ async function Saver(values, val){
     const conn = await fetch(url, {
         method : val===0 ? "POST" : val===1 ? "PATCH" : "DELETE",
         headers: {
-            "Content-Type" : "application/json"
+            "Content-Type" : "application/json",
         },
         body: JSON.stringify({
             name : values.name,

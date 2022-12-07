@@ -1,6 +1,6 @@
 async function Saver(values, val){
 
-    const url = (val===0 ? "https://khajapi-backend.onrender.com/api/user" : val===1 ? `/api/user/${values.id}` : `/api/user/${values}`)
+    const url = (val===0 ? "https://khajaapi-backend.onrender.com/api/user" : val===1 ? `/api/user/${values.id}` : `/api/user/${values}`)
     const conn = await fetch(url, {
         method : val===0 ? "POST" : val===1 ? "PATCH" : "DELETE",
         headers: {

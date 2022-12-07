@@ -6,7 +6,7 @@ function Read() {
 
 	async function go() {	
 		try {
-			const result = await fetch("https://khajapi-backend.onrender.com/api/user/", {
+			const result = await fetch("https://khajaapi-backend.onrender.com/api/user/", {
 				method: "GET",
 				headers: {
 					"Content-Type": "application/json",

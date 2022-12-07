@@ -1,7 +1,6 @@
 async function Saver(values, val){
 
-    const url = (val===0 ? "/api/user" : val===1 ? `/api/user/${values.id}` :  `/api/user/${values}` )
-
+    const url = (val===0 ? "/api/user" : val===1 ? `/api/user/${values.id}` : `/api/user/${values}`)
     const conn = await fetch(url, {
         method : val===0 ? "POST" : val===1 ? "PATCH" : "DELETE",
         headers: {
@@ -11,8 +10,11 @@ async function Saver(values, val){
             name : values.name,
             email: values.email,
             phone: values.phone
-        })
+        }),
     });
+
+    console.log(values);
+    console.log(conn.status);
 
     if(conn.status === 200){
         return 1;

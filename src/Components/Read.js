@@ -11,6 +11,7 @@ function Read() {
 				headers: {
 					"Content-Type": "application/json",
 				},
+				mode: "no-cors"
 			});
 			console.log(result);
 			const res = await result.json();

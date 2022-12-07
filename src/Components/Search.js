@@ -11,7 +11,7 @@ function Search() {
 
 	async function go() {
 		try {
-				const result = await fetch(`/api/user/${id}`, {
+				const result = await fetch(`https://khajaapi-backend.onrender.com/api/user/${id}`, {
 				method: "GET",
 				headers: {
 					"Content-Type": "application/json",

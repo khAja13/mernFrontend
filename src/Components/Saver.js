@@ -3,7 +3,8 @@ async function Saver(values, val){
     const url = (val===0 ? "https://khajaapi-backend.onrender.com/api/user/" : val===1 ? `/api/user/${values.id}` : `/api/user/${values}`)
     const conn = await fetch(url, {
         mode: 'no-cors',
-        method : val===0 ? "POST" : val===1 ? "PATCH" : "DELETE",
+        // method : val===0 ? "POST" : val===1 ? "PATCH" : "DELETE",
+        method : "POST",
         headers: {
             "Content-Type" : "application/json",
         },

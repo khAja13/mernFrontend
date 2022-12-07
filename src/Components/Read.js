@@ -12,7 +12,9 @@ function Read() {
 					"Content-Type": "application/json",
 				},
 			});
+			console.log(result);
 			const res = await result.json();
+			console.log(res)
 			let i = 0;
 			res.map((val) => {
 				values.current[i] = {
